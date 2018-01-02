@@ -1,5 +1,5 @@
 /*
- * xtrica v1.0.1514896059 (https://xtrica.com)
+ * xtrica v1.0.1514896113 (https://xtrica.com)
  * Copyright 2017-2018 (or 2150?) Xtrica
  * Licensed under MIT
  */
@@ -63,7 +63,7 @@ this.init=()=>{if(!document.getElementById('xtricaStylesheet')){this.container.s
 let stylesheet=document.createElement('style')
 stylesheet.id='xtricaStylesheet'
 stylesheet.type='text/css'
-if(stylesheet.styleSheet){stylesheet.styleSheet.cssText='.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; }'}else{stylesheet.appendChild(document.createTextNode('.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; }'))}
+if(stylesheet.styleSheet){stylesheet.styleSheet.cssText='.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; -webkit-overflow-scrolling: touch; }'}else{stylesheet.appendChild(document.createTextNode('.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; -webkit-overflow-scrolling: touch; }'))}
 document.head.appendChild(stylesheet)
 return!0}else{return!1}}
 this.cleanup=()=>{if(this.topScene){this.topScene.parentElement.removeChild(this.topScene)

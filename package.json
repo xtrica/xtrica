@@ -1,6 +1,6 @@
 {
   "name": "xtrica",
-  "version": "1.0.1514896059",
+  "version": "1.0.1514896113",
   "description": "Xtrica: A javascript class for building a frictionless UX flow / transition page container.",
   "main": "index.js",
   "author": {
