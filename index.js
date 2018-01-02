@@ -1,6 +1,6 @@
 /*
- * xtrica v1.0.1512929288 (https://xtrica.com)
- * Copyright 2017 (or 2150?) Xtrica
+ * xtrica v1.0.1514895434 (https://xtrica.com)
+ * Copyright 2017-2018 (or 2150?) Xtrica
  * Licensed under MIT
  */
 export default function(container){this.topScene=null
@@ -59,11 +59,11 @@ this.topScene.setAttribute('style','border:0 !important;display:block !important
 if(this.container.insertBefore(this.topScene,this.container.firstChild)){this.toScene(this.topScene)
 setTimeout(()=>{this.container.style.opacity=1},100)
 return!0}else{return!1}}}
-this.init=()=>{if(!document.getElementById('xtricaStylesheet')){this.container.setAttribute('style','bottom: 0 !important; display: block !important; height: 100vh !important; left: 0 !important; opacity: 0; overflow: hidden !important; position: fixed !important; right: 0 !important; top: 0 !important; transition: opacity 300ms linear !important; -o-transition: opacity 300ms linear !important; -ms-transition: opacity 300ms linear !important; -moz-transition: opacity 300ms linear !important; -webkit-transition: opacity 300ms linear !important; width: 100% !important;')
+this.init=()=>{if(!document.getElementById('xtricaStylesheet')){this.container.setAttribute('style','bottom: 0 !important; display: block !important; height: 100vh !important; left: 0 !important; opacity: 0; overflow-x: hidden !important; overflow-y: hidden !important; position: fixed !important; right: 0 !important; top: 0 !important; transition: opacity 300ms linear !important; -o-transition: opacity 300ms linear !important; -ms-transition: opacity 300ms linear !important; -moz-transition: opacity 300ms linear !important; -webkit-transition: opacity 300ms linear !important; width: 100% !important;')
 let stylesheet=document.createElement('style')
 stylesheet.id='xtricaStylesheet'
 stylesheet.type='text/css'
-if(stylesheet.styleSheet){stylesheet.styleSheet.cssText='.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; }'}else{stylesheet.appendChild(document.createTextNode('.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; }'))}
+if(stylesheet.styleSheet){stylesheet.styleSheet.cssText='.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; -webkit-overflow-scrolling: touch; }'}else{stylesheet.appendChild(document.createTextNode('.xscene { display: block !important; height: 100vh !important; overflow-y: scroll !important; position: relative !important; width: 100% !important; }'))}
 document.head.appendChild(stylesheet)
 return!0}else{return!1}}
 this.cleanup=()=>{if(this.topScene){this.topScene.parentElement.removeChild(this.topScene)
